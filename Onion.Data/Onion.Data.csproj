@@ -46,6 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDBContext.cs" />
+    <Compile Include="Migrations\202004080544333_init.cs" />
+    <Compile Include="Migrations\202004080544333_init.Designer.cs">
+      <DependentUpon>202004080544333_init.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,6 +66,11 @@
       <Project>{1C56331B-3B48-4ABE-89AB-DE7E046E96C3}</Project>
       <Name>Onion.Interfaces</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004080544333_init.resx">
+      <DependentUpon>202004080544333_init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

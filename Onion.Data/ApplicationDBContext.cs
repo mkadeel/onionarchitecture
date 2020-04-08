@@ -7,7 +7,7 @@ namespace Onion.Data
 {
     public class ApplicationDBContext : DbContext, IApplicationDBContext
     {
-       
+       public ApplicationDBContext() { }
         public ApplicationDBContext(string connectionString = "ApplicationConnectionString")
             : base(connectionString)
         {
