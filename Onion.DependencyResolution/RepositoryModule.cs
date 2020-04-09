@@ -1,7 +1,8 @@
 ﻿using Ninject.Modules;
 using Onion.Data;
+using Onion.Domain.Models;
 using Onion.Interfaces;
-using Onion.Repositories;
+using Onion.Repository.Repositories;
 
 namespace Onion.DependencyResolution
 {
@@ -11,7 +12,7 @@ namespace Onion.DependencyResolution
         public override void Load()
         {
             Bind<IApplicationDBContext>().To<ApplicationDBContext>().WithConstructorArgument("Name", "ApplicationConnectionString");
-            Bind<IUserRepository>().To<UserRepository>();
+            Bind<IBaseRepository<User>>().To<BaseRepository<User>>();
         }
     }
 }

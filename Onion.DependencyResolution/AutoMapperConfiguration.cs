@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Onion.Domain.Models;
+using TCO.TFM.WDMS.ViewModels.ViewModels;
 
 namespace Onion.DependencyResolution
 {
@@ -8,6 +10,7 @@ namespace Onion.DependencyResolution
         {
             Mapper.Initialize(config =>
             {
+                config.CreateMap(typeof(User), typeof(UserVM));
 
             });
         }

@@ -14,6 +14,7 @@ namespace Onion.WebApp.Controllers
 
         public ActionResult Index()
         {
+            var users = _userService.GetAllUsers();
             return View();
         }
 
